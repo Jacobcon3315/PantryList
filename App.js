@@ -1,15 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import ShoppingListPage from './src/ShoppingList';
-import PantryListPage from './src/PantryList';
+import { StatusBar } from "expo-status-bar";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import GroceriesListPage from "./src/GroceriesList";
+import PantryListPage from "./src/PantryList";
 
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Shop" component={ShoppingListPage} />
+      <Tab.Screen name="Groceries" component={GroceriesListPage} />
       <Tab.Screen name="Pantry" component={PantryListPage} />
     </Tab.Navigator>
   );
