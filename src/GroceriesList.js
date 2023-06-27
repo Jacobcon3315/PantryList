@@ -13,30 +13,14 @@ const DATA = [
 
 function GroceriesListPage() {
     return (
-      <View style={{ height: 200, width: Dimensions.get("screen").width }}>
+      <View style={{ height: 200, width: Dimensions.get("screen").width, flex: 1, justifyContent: "center", alignItems: "center"}}>
         <FlashList
         data={DATA}
         renderItem={({ item }) => <Text>{item.title}</Text>}
-        estimatedItemSize={200}
+        estimatedItemSize={50}
         />
       </View>
     );
   }
-
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      marginTop: StatusBar.currentHeight || 0,
-    },
-    item: {
-      backgroundColor: "#f9c2ff",
-      padding: 20,
-      marginVertical: 8,
-      marginHorizontal: 16,
-    },
-    title: {
-      fontSize: 12,
-    },
-  });
 
   export default GroceriesListPage;
