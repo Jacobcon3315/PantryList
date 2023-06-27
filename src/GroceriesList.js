@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, SafeAreaView, StyleSheet, StatusBar } from "react-native";
+import { Text, View, StyleSheet, StatusBar, Dimensions } from "react-native";
 import { FlashList } from "@shopify/flash-list";
 
 const DATA = [
@@ -13,13 +13,13 @@ const DATA = [
 
 function GroceriesListPage() {
     return (
-      <SafeAreaView style={StyleSheet.container}>
+      <View style={{ height: 200, width: Dimensions.get("screen").width }}>
         <FlashList
         data={DATA}
         renderItem={({ item }) => <Text>{item.title}</Text>}
         estimatedItemSize={200}
         />
-      </SafeAreaView>
+      </View>
     );
   }
 
